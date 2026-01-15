@@ -15,7 +15,7 @@ import { User } from '@prisma/client';
 @ApiTags('users')
 @Controller('users')
 export class UsersController {
-  constructor(private usersService: UsersService) {}
+  constructor(private usersService: UsersService) { }
 
   @Get()
   @UseGuards(JwtAuthGuard, RolesGuard)
